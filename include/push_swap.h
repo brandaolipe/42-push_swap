@@ -6,7 +6,7 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 15:14:49 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/07 20:30:06 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/09 10:37:45 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void	fill_list_a(char **argv);
 char	*reverse_split(char **arr);
-int		verify_chars(char *numbers);
+int		verify_arguments(char *args);
 
 typedef struct s_list_push
 {
