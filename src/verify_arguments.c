@@ -12,38 +12,33 @@
 
 #include "../include/push_swap.h"
 
-//void	fill_list_a(char **argv)
-//{
-//}
+static int	is_signal(char signal);
 
-int	verify_chars(char *arguments)
+int	verify_arguments(char *args)
 {
 	int	i;
 
+	if (args[0] == '\0')
+		return (0);
 	i = 0;
-	while (arguments[i])
+	while (args[i])
 	{
-		if (ft_isdigit(arguments[i] || arguments[i] == 32))
-			i++;
-		else if (arguments[i] == '+' || arguments[i] == '-')
-		{
-			if(i != 0)
-			{
-				if (ft_isdigit(arguments[--i]))
-					return (0);
-				if (arguments[++i] == '+' || arguments[++i] == '-')
-					return (0);
-				if (arguments[--i] == ' ' && arguments[++i] == ' ')
-					return (0);
-			}
-			i++;
-		}
+		if (!ft_isdigit(args[i]) && !is_signal(args[i]) && args[i] != ' ')
+			return (0);
+		else if (ft_isdigit(args[i]) && is_signal(args[i+1]))
+			return (0);
+		else if (is_signal(args[i]) && (is_signal(args[i+1]) || args[i+1] == ' '))
+			return (0);
+		i++;
 	}
 	return (1);
 }
 
-int	main(void)
+static int	is_signal(char signal)
 {
-	ft_isdigit
+	if (signal == '+' || signal == '-')
+	{
+		return (1);
+	}
 	return (0);
 }
