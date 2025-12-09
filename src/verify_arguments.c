@@ -6,7 +6,7 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 16:49:03 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/07 21:28:40 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/09 10:52:22 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@ int	verify_arguments(char *args)
 	{
 		if (!ft_isdigit(args[i]) && !is_signal(args[i]) && args[i] != ' ')
 			return (0);
-		else if (ft_isdigit(args[i]) && is_signal(args[i+1]))
+		else if (ft_isdigit(args[i]) && is_signal(args[i + 1]))
 			return (0);
-		else if (is_signal(args[i]) && (is_signal(args[i+1]) || args[i+1] == ' '))
+		else if (is_signal(args[i]) && (is_signal(args[i + 1])
+				|| args[i + 1] == ' '))
 			return (0);
 		i++;
 	}
