@@ -6,7 +6,7 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 15:14:49 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/09 10:37:45 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:20:25 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include <unistd.h>
+# include <stdio.h>
 # include "libft.h"
 
 void	fill_list_a(char **argv);
