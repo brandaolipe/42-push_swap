@@ -6,7 +6,7 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 10:49:15 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/09 13:52:34 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/10 19:17:28 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,40 @@
 
 t_list_push	fill_list_a(char *args)
 {
-	char	**array_args;
+	char		**array_args;
 	t_list_push	head_list_a;
+	int			content;
 
 	head_list_a = NULL;
 	array_args = ft_split(args, ' ');
 	while (*array_args)
 	{
-		add_node(&head_list_a, **array_args)
-		*array_args++;
+		content = ft_atoi(*array_args);
+		add_node(&head_list_a, content);
+		array_args++;
 	}
 	return (head_list_a);
 }
 
-void	add_node(t_list_push **lst, char *content)
+void	add_node(t_list_push **lst, int content)
 {
 	t_list_push	*new_node;
 	t_list_push	*temp;
 
-	int	new_content;
- 
-	new_content = ft_atoi(content);
-	new_node->number = new_content;
-	if (!*lst)
+	new_node = malloc(sizeof(t_list_push));
+	if (new_node == NULL)
+		exit (1);
+	new_node->number = content;
+	new_node->next = NULL;
+	if (*lst == NULL)
+	{
+		new_node->prev = NULL;
 		*lst = new_node;
-	//...
+		return ;
+	}
+	temp = *lst;
+	while (temp->next)
+		temp = temp->next;
+	new_node->prev = temp;
+	temp->next = new_node;
 }
