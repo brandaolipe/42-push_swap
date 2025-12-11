@@ -6,12 +6,11 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 20:09:52 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/07 20:51:47 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/11 18:59:19 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
@@ -25,12 +24,11 @@ int	main(int argc, char **argv)
 	}
 	else if (argc == 2)
 	{
-		verify_arguments(argv[1]);
+		if (!verify_arguments(argv[1]))
+			exit(1);
 	}
-	else
-	{
-		str = reverse_split(argv);
-		verify_arguments(str);
-	}
+	str = reverse_split(++argv);
+	if (!verify_arguments(str))
+		exit(1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 10:49:15 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/10 19:17:28 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/11 16:47:36 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list_push	fill_list_a(char *args)
 	array_args = ft_split(args, ' ');
 	while (*array_args)
 	{
-		content = ft_atoi(*array_args);
+		content = ft_atoi_enhance(*array_args);
 		add_node(&head_list_a, content);
 		array_args++;
 	}
