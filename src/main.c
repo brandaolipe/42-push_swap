@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 20:09:52 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/13 21:39:30 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/14 19:41:53 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,11 @@ int	main(int argc, char **argv)
 	{
 		str = reverse_split(++argv);
 		if (!verify_arguments(str))
-			exit(1);
-		create_list_a(str);
+			exit(1); //invalid_arguments();
+		//free_split(str);
+		process_list_a(str);
+		//create_list_a(str);
+		free(str);
 	}
 	return (0);
 }

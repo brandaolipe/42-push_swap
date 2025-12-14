@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 17:02:17 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/14 15:23:41 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/14 15:43:21 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ char	*reverse_split(char **arr)
 			(*arr)++;
 			i++;
 		}
-		str[i++] = ' ';
+		if (*(arr + 1) != NULL)
+			str[i++] = ' ';
 		arr++;
 	}
 	str[i] = '\0';
@@ -58,5 +59,5 @@ static int	absolute_len(char **arr)
 		}
 		j++;
 	}
-	return (len + j - 2);
+	return (len + j - 1);
 }
