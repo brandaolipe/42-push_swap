@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_split.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 17:02:17 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/13 21:32:31 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/14 15:23:41 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,5 @@ static int	absolute_len(char **arr)
 		}
 		j++;
 	}
-	return (len + j - 1);
+	return (len + j - 2);
 }

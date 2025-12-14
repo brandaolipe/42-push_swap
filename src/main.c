@@ -6,7 +6,7 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 20:09:52 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/11 18:59:19 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/13 21:39:30 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,14 @@ int	main(int argc, char **argv)
 	{
 		if (!verify_arguments(argv[1]))
 			exit(1);
+		create_list_a(argv[1]);
 	}
-	str = reverse_split(++argv);
-	if (!verify_arguments(str))
-		exit(1);
+	else 
+	{
+		str = reverse_split(++argv);
+		if (!verify_arguments(str))
+			exit(1);
+		create_list_a(str);
+	}
 	return (0);
 }

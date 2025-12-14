@@ -6,7 +6,7 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 16:09:44 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/11 19:00:58 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/13 21:13:59 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi_enhanced(char *str)
 	{
 		number = (number * 10) + (*str - '0');
 		if ((number * signal) > MAX_INT || (number * signal) < MIN_INT)
-			kill_process();
+			exit(55);//kill_process();
 		str++;
 	}
 	return ((number * signal));
