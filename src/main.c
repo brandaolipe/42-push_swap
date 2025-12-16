@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 20:09:52 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/14 19:41:53 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/15 17:58:57 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,11 @@ int	main(int argc, char **argv)
 	else 
 	{
 		str = reverse_split(++argv);
-		if (!verify_arguments(str))
-			exit(1); //invalid_arguments();
-		//free_split(str);
+		if (!verify_arguments(str)){
+			free(str);
+			exit(1);
+		}
 		process_list_a(str);
-		//create_list_a(str);
-		free(str);
 	}
 	return (0);
 }

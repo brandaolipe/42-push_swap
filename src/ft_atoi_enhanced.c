@@ -3,36 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_enhanced.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 16:09:44 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/13 21:13:59 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/15 18:14:27 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	ft_atoi_enhanced(char *str)
+static void	kill_process(t_list_push *lst, char **arr);
+
+int	ft_atoi_enhanced(char *str, t_list_push	*lst, char **arr)
 {
 	long	number;
 	int		signal;
+	int		i;
 
+	i = 0;
 	signal = 1;
 	number = 0;
-	while (*str == ' ')
-		str++;
-	if (*str == '-' || *str == '+')
+	while (str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (*str == '-')
+		if (str[i] == '-')
 			signal = -1;
-		str++;
+		i++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		number = (number * 10) + (*str - '0');
+		number = (number * 10) + (str[i] - '0');
 		if ((number * signal) > MAX_INT || (number * signal) < MIN_INT)
-			exit(55);//kill_process();
-		str++;
+			kill_process(lst, arr);
+		i++;
 	}
 	return ((number * signal));
+}
+
+static void	kill_process(t_list_push *lst, char **arr)
+{
+	free_split(arr);
+	destroy_list(lst);
+	exit(1);
 }

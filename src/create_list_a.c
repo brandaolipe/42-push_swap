@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 18:57:56 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/14 19:41:55 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/15 18:28:37 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,18 @@ t_list_push	*create_list_a(char *args)
 	char		**array_args;
 	t_list_push	*list_a;
 	int			content;
+	int			i;
 
+	i = 0;
 	list_a = NULL;
 	array_args = ft_split(args, ' ');
-	while (*array_args)
+	free(args);
+	while (array_args[i])
 	{
-		content = ft_atoi_enhanced(*array_args);
+		content = ft_atoi_enhanced(array_args[i], list_a, array_args);
 		add_node(&list_a, content);
-		array_args++;
+		i++;
 	}
-	// while (list_a)
-	// {
-	// 	printf("%d\n", list_a->number);//printa os inteiros
-	// 	list_a = list_a->next;
-	// }
-	//check_duplicate_numbers(list_a);
-	//free(args);
 	free_split(array_args);
 	return (list_a);
 }
