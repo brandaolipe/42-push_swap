@@ -6,7 +6,7 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 15:14:49 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/14 19:56:21 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/15 21:26:47 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,17 @@ typedef struct s_list_push
 	struct s_list_push	*prev;
 }	t_list_push;
 
-//void	fill_list_a(char **argv);
 char		*reverse_split(char **arr);
 int			verify_arguments(char *args);
-void		add_node(t_list_push **lst, int content);
-int			ft_atoi_enhanced(char *str);
-t_list_push	*create_list_a(char *args);
+int			ft_atoi_enhanced(char *str, t_list_push *lst, char **arr);
 int			check_duplicate_numbers(t_list_push *lst);
 void		process_list_a(char	*args);
 void		free_split(char **arr);
 
 //list functions
 void		add_node(t_list_push **lst, int content);
+void		destroy_list(t_list_push *lst);
+void		fill_nodes_id(t_list_push *lst);
+t_list_push	*create_list_a(char *args);
 
 #endif
