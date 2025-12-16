@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 16:15:03 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/14 19:53:15 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:09:48 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int	check_duplicate_numbers(t_list_push *lst)
 		while (temp)
 		{
 			if (current->number == temp->number)
-				return (1);
+				return (0);
 			temp = temp->next;
 		}
 		current = current->next;
 	}
-	return (0);
+	return (1);
 }

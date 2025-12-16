@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 17:29:16 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/14 19:54:05 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/15 21:31:08 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,14 @@ void	process_list_a(char	*args)
 	t_list_push	*temp;
 
 	list_a = create_list_a(args);
-	if (check_duplicate_numbers(list_a))
+	if (!check_duplicate_numbers(list_a))
 	{
 		printf("Tem números duplicados.");
+		destroy_list(list_a);
 	}
 	else
 	{
-		printf("Não tem números duplicados.");
-	}
-	while (list_a->next)
-	{
-		temp = list_a->next;
-		free(list_a);
-		list_a = temp;
+		
+		destroy_list(list_a);
 	}
 }
