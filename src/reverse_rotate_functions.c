@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 04:27:41 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/19 05:14:47 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/19 05:18:14 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	reverse_rotate(t_list_push **lst)
 {
 	t_list_push	*last;
-	t_list_push *before_last;
+	t_list_push	*before_last;
 
 	if (!lst || !*lst || !(*lst)->next)
 		return ;

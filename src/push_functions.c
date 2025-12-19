@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_functions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 19:55:56 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/19 01:03:38 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/19 05:14:23 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	push_a(t_list_push **lst_a, t_list_push **lst_b)
 
 void	push_b(t_list_push **lst_a, t_list_push **lst_b)
 {
-	t_list_push *first_a;
+	t_list_push	*first_a;
 
 	if (!lst_a || !*lst_a)
 		return ;

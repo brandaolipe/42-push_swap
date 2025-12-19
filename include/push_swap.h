@@ -6,7 +6,7 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 15:14:49 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/15 21:26:47 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/19 05:30:51 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,18 @@ void		add_node(t_list_push **lst, int content);
 void		destroy_list(t_list_push *lst);
 void		fill_nodes_id(t_list_push *lst);
 t_list_push	*create_list_a(char *args);
+
+//moveset functions
+void		push_a(t_list_push **lst_a, t_list_push **lst_b);
+void		push_b(t_list_push **lst_a, t_list_push **lst_b);
+void		sa(t_list_push **lst);
+void		sb(t_list_push **lst);
+void		ss(t_list_push **lst_a, t_list_push **lst_b);
+void		ra(t_list_push **lst_a);
+void		rb(t_list_push **lst_b);
+void		rr(t_list_push **lst_a, t_list_push **lst_b);
+void		rra(t_list_push **lst_a);
+void		rrb(t_list_push **lst_b);
+void		rrr(t_list_push **lst_a, t_list_push **lst_b);
 
 #endif
