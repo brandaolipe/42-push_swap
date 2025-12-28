@@ -19,6 +19,7 @@ void	fill_nodes_id(t_list_push *lst)
 	t_list_push	*temp2;
 	int			id;
 
+	lst->max_id = 0;
 	head = lst;
 	temp1 = lst;
 	temp2 = lst;
@@ -31,6 +32,8 @@ void	fill_nodes_id(t_list_push *lst)
 				id++;
 			temp2 = temp2->next;
 		}
+		if (id > lst->max_id)
+			lst->max_id = id;
 		temp1->id = id;
 		temp1 = temp1->next;
 		temp2 = head;

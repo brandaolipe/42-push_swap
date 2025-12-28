@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   process_list_a.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 17:29:16 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/19 05:33:17 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/27 16:02:11 by userzer0         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,6 @@ void	process_list_a(char	*args)
 	else
 	{
 		fill_nodes_id(list_a);
-		temp = list_a;
-		while (temp)
-		{
-			printf("Number:%d, Id:%d \n", temp->number, temp->id);
-			temp = temp->next;
-		}
-		destroy_list(list_a);
 	}
+	radix(&list_a, &list_b);
 }

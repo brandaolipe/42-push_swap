@@ -25,6 +25,7 @@ typedef struct s_list_push
 {
 	int					id;
 	int					number;
+	int					max_id;
 	struct s_list_push	*next;
 	struct s_list_push	*prev;
 }	t_list_push;
@@ -41,6 +42,7 @@ void		add_node(t_list_push **lst, int content);
 void		destroy_list(t_list_push *lst);
 void		fill_nodes_id(t_list_push *lst);
 t_list_push	*create_list_a(char *args);
+void	radix(t_list_push **stack_a, t_list_push **stack_b);
 
 //moveset functions
 void		push_a(t_list_push **lst_a, t_list_push **lst_b);
