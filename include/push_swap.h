@@ -6,7 +6,7 @@
 /*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 15:14:49 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/19 05:30:51 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/28 21:16:43 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void		free_split(char **arr);
 void		add_node(t_list_push **lst, int content);
 void		destroy_list(t_list_push *lst);
 void		fill_nodes_id(t_list_push *lst);
-t_list_push	*create_list_a(char *args);
+t_list_push	*create_list_a(char *args, int	free_flag);
 void	radix(t_list_push **stack_a, t_list_push **stack_b);
 
 //moveset functions
