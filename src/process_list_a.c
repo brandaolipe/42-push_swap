@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   process_list_a.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 17:29:16 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/27 16:02:11 by userzer0         ###   ########.fr       */
+/*   Updated: 2025/12/28 21:55:10 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@ void	process_list_a(char	*args)
 	t_list_push	*list_b;
 	t_list_push	*temp;
 
-	list_a = create_list_a(args);
+	list_a = create_list_a(args, 1);
 	list_b = NULL;
 	if (!check_duplicate_numbers(list_a))
 	{
-		printf("Tem números duplicados.");
+		ft_putendl_fd("Error", 1);
 		destroy_list(list_a);
+		exit(1);
 	}
 	else
 	{
@@ -31,3 +32,4 @@ void	process_list_a(char	*args)
 	}
 	radix(&list_a, &list_b);
 }
+//Check if it's already sorted.

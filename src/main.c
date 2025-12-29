@@ -6,11 +6,13 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 20:09:52 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/15 17:58:57 by febranda         ###   ########.fr       */
+/*   Updated: 2025/12/28 21:16:03 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+static void	invalid_arguments(void);
 
 int	main(int argc, char **argv)
 {
@@ -18,24 +20,28 @@ int	main(int argc, char **argv)
 
 	str = NULL;
 	if (argc < 2)
-	{
-		ft_putendl_fd("Erro: faltaram os argumentos.", 1);
 		exit(1);
-	}
 	else if (argc == 2)
 	{
 		if (!verify_arguments(argv[1]))
-			exit(1);
-		create_list_a(argv[1]);
+			invalid_arguments();
+		create_list_a(argv[1], 0);
 	}
-	else 
+	else
 	{
 		str = reverse_split(++argv);
-		if (!verify_arguments(str)){
+		if (!verify_arguments(str))
+		{
 			free(str);
-			exit(1);
+			invalid_arguments();
 		}
 		process_list_a(str);
 	}
 	return (0);
+}
+
+static void	invalid_arguments(void)
+{
+	ft_putendl_fd("Error", 1);
+	exit(1);
 }
