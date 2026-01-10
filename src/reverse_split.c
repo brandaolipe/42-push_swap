@@ -6,11 +6,11 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 17:02:17 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/14 15:43:21 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/10 18:03:05 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 static int	absolute_len(char **arr);
 

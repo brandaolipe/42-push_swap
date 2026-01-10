@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_enhanced.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 16:09:44 by febranda          #+#    #+#             */
-/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
+/*   Updated: 2026/01/10 18:02:26 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 static void	kill_process(t_stack *lst, char **arr);
 

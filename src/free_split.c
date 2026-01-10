@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   free_split.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 19:07:17 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/14 19:11:47 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/10 18:02:11 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 void	free_split(char **arr)
 {

@@ -6,11 +6,11 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 20:09:52 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/28 21:16:03 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/10 18:01:49 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 static void	invalid_arguments(void);
 

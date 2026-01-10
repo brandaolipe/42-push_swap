@@ -1,4 +1,16 @@
-#include "../include/push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   define_sorting_method.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/10 17:55:11 by febranda          #+#    #+#             */
+/*   Updated: 2026/01/10 17:56:52 by febranda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
 
 void	define_sorting_method(t_stack **stack_a, t_stack **stack_b)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate_functions.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 04:27:41 by febranda          #+#    #+#             */
-/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
+/*   Updated: 2026/01/10 18:02:56 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 static void	reverse_rotate(t_stack **lst)
 {

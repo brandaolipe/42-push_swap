@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_functions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 19:55:56 by febranda          #+#    #+#             */
-/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
+/*   Updated: 2026/01/10 18:01:54 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 void	push_a(t_stack **lst_a, t_stack **lst_b)
 {

@@ -15,6 +15,24 @@ SRCS =	main.c \
 		verify_arguments.c \
 		reverse_split.c \
 		process_list_a.c \
+		add_node.c \
+		already_ordered.c \
+		check_duplicate_numbers.c \
+		create_list_a.c \
+		define_sorting_method.c \
+		destroy_list.c \
+		fill_nodes_id.c \
+		five_or_less_moveset.c \
+		free_split.c \
+		ft_atoi_enhanced.c \
+		last_node.c \
+		push_functions.c \
+		radix.c \
+		reverse_rotate_functions.c \
+		rotate_functions.c \
+		stack_size.c \
+		swap_functions.c
+
 
 
 SRCS := $(addprefix $(SRC_DIR)/, $(SRCS))

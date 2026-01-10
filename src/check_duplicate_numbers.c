@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check_duplicate_numbers.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 16:15:03 by febranda          #+#    #+#             */
-/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
+/*   Updated: 2026/01/10 17:57:05 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 int	check_duplicate_numbers(t_stack *lst)
 {

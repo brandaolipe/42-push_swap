@@ -1,6 +1,18 @@
-#include "../include/push_swap.h" 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   five_or_less_moveset.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/10 17:56:12 by febranda          #+#    #+#             */
+/*   Updated: 2026/01/10 17:58:55 by febranda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int	get_node_place(t_stack *stack, int	target);
+#include "push_swap.h" 
+
+static int	get_node_place(t_stack *stack, int target);
 static void	push_min_to_b(t_stack **stack_a, t_stack **stack_b, int target_id);
 
 void	three_nodes_order(t_stack **stack)
@@ -8,11 +20,10 @@ void	three_nodes_order(t_stack **stack)
 	int	first;
 	int	second;
 	int	last;
-	
+
 	first = (*stack)->id;
 	second = (*stack)->next->id;
-	last =	last_node(*stack)->id;
-	
+	last = last_node(*stack)->id;
 	if (already_ordered(*stack))
 		return ;
 	if (first > second && first > last)
@@ -55,7 +66,7 @@ void	five_nodes_order(t_stack **stack_a, t_stack **stack_b)
 		push_a(stack_a, stack_b);
 }
 
-static int	get_node_place(t_stack *stack, int	target)
+static int	get_node_place(t_stack *stack, int target)
 {
 	int	pos;
 
