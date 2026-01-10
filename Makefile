@@ -33,8 +33,6 @@ SRCS =	main.c \
 		stack_size.c \
 		swap_functions.c
 
-
-
 SRCS := $(addprefix $(SRC_DIR)/, $(SRCS))
 OBJS := $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
