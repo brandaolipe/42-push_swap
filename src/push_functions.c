@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   push_functions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 19:55:56 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/19 05:14:23 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	push_a(t_list_push **lst_a, t_list_push **lst_b)
+void	push_a(t_stack **lst_a, t_stack **lst_b)
 {
-	t_list_push	*first_b;
+	t_stack	*first_b;
 
 	if (!lst_b || !*lst_b)
 		return ;
@@ -30,9 +30,9 @@ void	push_a(t_list_push **lst_a, t_list_push **lst_b)
 	ft_putendl_fd("pa", 1);
 }
 
-void	push_b(t_list_push **lst_a, t_list_push **lst_b)
+void	push_b(t_stack **lst_a, t_stack **lst_b)
 {
-	t_list_push	*first_a;
+	t_stack	*first_a;
 
 	if (!lst_a || !*lst_a)
 		return ;

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_enhanced.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 16:09:44 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/28 21:10:05 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void	kill_process(t_list_push *lst, char **arr);
+static void	kill_process(t_stack *lst, char **arr);
 
-int	ft_atoi_enhanced(char *str, t_list_push	*lst, char **arr)
+int	ft_atoi_enhanced(char *str, t_stack	*lst, char **arr)
 {
 	long	number;
 	int		signal;
@@ -41,7 +41,7 @@ int	ft_atoi_enhanced(char *str, t_list_push	*lst, char **arr)
 	return ((number * signal));
 }
 
-static void	kill_process(t_list_push *lst, char **arr)
+static void	kill_process(t_stack *lst, char **arr)
 {
 	free_split(arr);
 	destroy_list(lst);

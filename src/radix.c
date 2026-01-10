@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 21:00:50 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/28 21:01:35 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	get_bit_size(int max_id);
 
-void	radix(t_list_push **stack_a, t_list_push **stack_b)
+void	radix(t_stack **stack_a, t_stack **stack_b)
 {
 	int	i;
 	int	j;

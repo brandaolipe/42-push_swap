@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   swap_functions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 16:54:05 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/19 05:10:39 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void	swap(t_list_push **lst)
+static void	swap(t_stack **lst)
 {
-	t_list_push	*first;
-	t_list_push	*second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (!lst || !*lst || !(*lst)->next)
 		return ;
@@ -30,19 +30,19 @@ static void	swap(t_list_push **lst)
 	*lst = second;
 }
 
-void	sa(t_list_push **lst_a)
+void	sa(t_stack **lst_a)
 {
 	swap(lst_a);
 	ft_putendl_fd("sa", 1);
 }
 
-void	sb(t_list_push **lst_b)
+void	sb(t_stack **lst_b)
 {
 	swap(lst_b);
 	ft_putendl_fd("sb", 1);
 }
 
-void	ss(t_list_push **lst_a, t_list_push **lst_b)
+void	ss(t_stack **lst_a, t_stack **lst_b)
 {
 	int	swapped;
 

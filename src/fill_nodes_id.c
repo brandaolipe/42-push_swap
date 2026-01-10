@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   fill_nodes_id.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 19:11:35 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/19 05:35:05 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	fill_nodes_id(t_list_push *lst)
+void	fill_nodes_id(t_stack *lst)
 {
-	t_list_push	*head;
-	t_list_push	*temp1;
-	t_list_push	*temp2;
+	t_stack	*head;
+	t_stack	*temp1;
+	t_stack	*temp2;
 	int			id;
 
 	lst->max_id = 0;

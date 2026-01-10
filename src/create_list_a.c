@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   create_list_a.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 18:57:56 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/28 21:28:51 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-t_list_push	*create_list_a(char *args, int free_flag)
+t_stack	*create_list_a(char *args, int free_flag)
 {
 	char		**array_args;
-	t_list_push	*list_a;
+	t_stack	*list_a;
 	int			content;
 	int			i;
 

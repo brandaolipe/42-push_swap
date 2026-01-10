@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   add_node.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 10:49:15 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/15 16:53:35 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	add_node(t_list_push **lst, int content)
+void	add_node(t_stack **lst, int content)
 {
-	t_list_push	*new_node;
-	t_list_push	*temp;
+	t_stack	*new_node;
+	t_stack	*temp;
 
-	new_node = malloc(sizeof(t_list_push));
+	new_node = malloc(sizeof(t_stack));
 	if (new_node == NULL)
 		exit (1);
 	new_node->number = content;

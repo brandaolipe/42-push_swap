@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 	{
 		if (!verify_arguments(argv[1]))
 			invalid_arguments();
-		create_list_a(argv[1], 0);
+		process_list_a(argv[1], 0);
 	}
 	else
 	{
@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 			free(str);
 			invalid_arguments();
 		}
-		process_list_a(str);
+		process_list_a(str, 1);
 	}
 	return (0);
 }

@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_functions.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 01:04:06 by febranda          #+#    #+#             */
-/*   Updated: 2025/12/19 05:19:01 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/08 16:30:20 by userzer0         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void	rotate(t_list_push **lst)
+static void	rotate(t_stack **lst)
 {
-	t_list_push	*first;
-	t_list_push	*temp;
+	t_stack	*first;
+	t_stack	*temp;
 
 	first = *lst;
 	*lst = first->next;
@@ -29,7 +29,7 @@ static void	rotate(t_list_push **lst)
 	first->next = NULL;
 }
 
-void	ra(t_list_push **lst_a)
+void	ra(t_stack **lst_a)
 {
 	if (!lst_a || !*lst_a || !(*lst_a)->next)
 		return ;
@@ -37,7 +37,7 @@ void	ra(t_list_push **lst_a)
 	ft_putendl_fd("ra", 1);
 }
 
-void	rb(t_list_push **lst_b)
+void	rb(t_stack **lst_b)
 {
 	if (!lst_b || !*lst_b || !(*lst_b)->next)
 		return ;
@@ -45,7 +45,7 @@ void	rb(t_list_push **lst_b)
 	ft_putendl_fd("rb", 1);
 }
 
-void	rr(t_list_push **lst_a, t_list_push **lst_b)
+void	rr(t_stack **lst_a, t_stack **lst_b)
 {
 	int	rotated;
 
