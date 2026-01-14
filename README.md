@@ -51,7 +51,9 @@ Other available commands:
     make re
     
    **make clean:** To delete the objects (files .o) generated during the make compilation;
+
    **make fclean:** Delete the objects if they haven't already been deleted, and delete the executable file as well.
+   
   **make re:** Delete everything and compile;
 
 ## Resources
