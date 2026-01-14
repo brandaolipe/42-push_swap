@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: userzer0 <userzer0@student.42.fr>          +#+  +:+       +#+        */
+/*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 15:14:49 by febranda          #+#    #+#             */
-/*   Updated: 2026/01/08 16:31:01 by userzer0         ###   ########.fr       */
+/*   Updated: 2026/01/14 19:37:35 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ typedef struct s_stack
 	int					id;
 	int					number;
 	int					max_id;
-	struct s_stack	*next;
-	struct s_stack	*prev;
+	struct s_stack		*next;
+	struct s_stack		*prev;
 }	t_stack;
 
 char		*reverse_split(char **arr);
@@ -43,8 +43,8 @@ void		define_sorting_method(t_stack **stack_a, t_stack **stack_b);
 void		add_node(t_stack **lst, int content);
 void		destroy_list(t_stack *lst);
 void		fill_nodes_id(t_stack *lst);
-t_stack	*create_list_a(char *args, int free_flag);
-t_stack	*last_node(t_stack *stack);
+t_stack		*create_list_a(char *args, int free_flag);
+t_stack		*last_node(t_stack *stack);
 void		radix(t_stack **stack_a, t_stack **stack_b);
 void		three_nodes_order(t_stack **stack);
 void		four_nodes_order(t_stack **stack_a, t_stack **stack_b);
