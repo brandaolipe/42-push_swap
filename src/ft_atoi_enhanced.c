@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 16:09:44 by febranda          #+#    #+#             */
-/*   Updated: 2026/01/10 18:02:26 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/15 22:10:14 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ static void	kill_process(t_stack *lst, char **arr)
 {
 	free_split(arr);
 	destroy_list(lst);
-	ft_putendl_fd("Error", 1);
+	ft_putendl_fd("Error", 2);
 	exit(1);
 }
