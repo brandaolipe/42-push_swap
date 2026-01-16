@@ -6,7 +6,7 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 17:29:16 by febranda          #+#    #+#             */
-/*   Updated: 2026/01/10 18:02:00 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/15 22:10:55 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	process_list_a(char *args, int free_flag)
 	list_b = NULL;
 	if (!check_duplicate_numbers(list_a))
 	{
-		ft_putendl_fd("Error", 1);
+		ft_putendl_fd("Error", 2);
 		destroy_list(list_a);
 		exit(1);
 	}
