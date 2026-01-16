@@ -6,13 +6,14 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 20:09:52 by febranda          #+#    #+#             */
-/*   Updated: 2026/01/10 18:01:49 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/16 01:14:51 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static void	invalid_arguments(void);
+static int	vefify_empty_arguments(char **args);
 
 int	main(int argc, char **argv)
 {
@@ -29,6 +30,8 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
+		if (vefify_empty_arguments(argv + 1))
+			invalid_arguments();
 		str = reverse_split(++argv);
 		if (!verify_arguments(str))
 		{
@@ -42,6 +45,22 @@ int	main(int argc, char **argv)
 
 static void	invalid_arguments(void)
 {
-	ft_putendl_fd("Error", 1);
+	ft_putendl_fd("Error", 2);
 	exit(1);
+}
+
+static int	vefify_empty_arguments(char **args)
+{
+	int	i;
+
+	i = 0;
+	while (args[i])
+	{
+		if (args[i][0] == '\0')
+		{
+			return (1);
+		}
+		i++;
+	}
+	return (0);
 }
