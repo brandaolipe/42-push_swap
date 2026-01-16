@@ -6,40 +6,34 @@
 /*   By: febranda <febranda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 16:49:03 by febranda          #+#    #+#             */
-/*   Updated: 2026/01/10 18:03:25 by febranda         ###   ########.fr       */
+/*   Updated: 2026/01/16 02:56:25 by febranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	is_signal(char signal);
-
 int	verify_arguments(char *args)
 {
 	int	i;
+	int	has_number;
 
-	if (args[0] == '\0')
-		return (0);
 	i = 0;
+	has_number = 0;
 	while (args[i])
 	{
-		if (!ft_isdigit(args[i]) && !is_signal(args[i]) && args[i] != ' ')
+		if (args[i] == ' ')
+			i++;
+		else if ((args[i] == '+' || args[i] == '-') && ft_isdigit(args[i + 1]))
+			i++;
+		else if (ft_isdigit(args[i]))
+		{
+			has_number = 1;
+			if (args[i + 1] == '-' || args[i + 1] == '+')
+				return (0);
+			i++;
+		}
+		else
 			return (0);
-		else if (ft_isdigit(args[i]) && is_signal(args[i + 1]))
-			return (0);
-		else if (is_signal(args[i]) && (is_signal(args[i + 1])
-				|| args[i + 1] == ' '))
-			return (0);
-		i++;
 	}
-	return (1);
-}
-
-static int	is_signal(char signal)
-{
-	if (signal == '+' || signal == '-')
-	{
-		return (1);
-	}
-	return (0);
+	return (has_number);
 }
